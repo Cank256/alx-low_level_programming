@@ -4,7 +4,6 @@
  * Return: Always 0 (Success)
  */
 #include <stdio.h>
-#include <unistd.h>
 int main(void)
 {
 int i;

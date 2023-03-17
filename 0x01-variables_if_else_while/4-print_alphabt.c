@@ -3,7 +3,7 @@
  *
  * Return: Always 0 (Success)
  */
-#include <unistd.h>
+#include <stdio.h>
 int main(void)
 {
 char letter;
