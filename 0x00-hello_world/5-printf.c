@@ -1,6 +1,8 @@
 #include <stdio.h>
-/*
- * Using Printf function
+/**
+ * main - entry point
+ * Description: Uses printf to output string
+ * Return: 0 (Success)
  */
 int main(void)
 {
