@@ -1,6 +1,8 @@
 #include <stdio.h>
 /**
- * app using the size function for different variable types
+ * main - entry point
+ * Description: prints the size of various types on the computer it is compiled and run on.
+ * Return: 0 (Success)
  */
 int main(void)
 {
