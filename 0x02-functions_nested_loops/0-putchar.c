@@ -2,7 +2,7 @@
 
 /*
  * A program that prints _putchar and adds new line
- * Return (0)
+ * Return: (0)
  */
 int main()
 {
