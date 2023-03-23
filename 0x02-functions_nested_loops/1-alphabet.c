@@ -1,6 +1,7 @@
 #include <stdio.h>
+#include "main.h"
 
-void print_alphabet(void);
+int print_alphabet(void);
 
 int main(void)
 {
@@ -13,7 +14,7 @@ return (0);
  * Return: (0)
  */
 
-void print_alphabet(void)
+int print_alphabet(void)
 {
 char letter = 'a';
 while(letter<='z')
