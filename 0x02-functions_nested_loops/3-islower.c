@@ -1,4 +1,5 @@
 #include <stdio.h>
+#iclude "main.h"
 
 int _islower(int c)
 {
