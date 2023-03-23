@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <main.h>
 
 /*
  * A program that prints _putchar and adds new line
