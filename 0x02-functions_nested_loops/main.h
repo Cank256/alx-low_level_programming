@@ -4,9 +4,7 @@
 #include <ctype.h>
 #include <assert.h>
 
-void foo();
-int bar(int x, int y);
-float baz(float a, float b, float c);
+void print_alphabet(void);
 
 /**
  * _putchar - writes the character c to stdout
