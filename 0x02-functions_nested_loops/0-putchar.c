@@ -1,10 +1,12 @@
 #include <stdio.h>
 #include "main.h"
 
-/*
- * A program that prints _putchar and adds new line
- * Return: (0)
+/**
+ * main - Entry point for the program
+ *
+ * Return: Always 0 (Success)
  */
+
 int main(void)
 {
 printf("_putchar\n");
