@@ -2,15 +2,15 @@
 #include <stdio.h>
 
 /**
- * _isdigit - check if  the input is a digit from 0 to 9
+ * _isdigit - check for a digit (0 through 9)
  *
- * @c: digit to check
+ * @c: character to check
  *
  * Return: 1 if c is a digit, 0 otherwise
  */
 int _isdigit(int c)
 {
-if(c >= 0 && c <= 9)
+if(c >= '0' && c <= '9')
 {
 return (1);
 }
