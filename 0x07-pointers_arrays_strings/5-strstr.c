@@ -23,12 +23,14 @@ for (i = 0; haystack[i] != '\0'; i++)
 if (haystack[i] == needle[0])
 {
 k = i;
+
 for (j = 0; needle[j] != '\0'; j++)
 {
 if (haystack[k] == needle[j])
 {
 k++;
-} else
+}
+else
 {
 break;
 }
