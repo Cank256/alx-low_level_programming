@@ -3,8 +3,8 @@
 
 /**
  * _strchr - function that locates a character in a string
- * @s - String
- * @c - Character to be located
+ * @s: String
+ * @c: Character to be located
  *
  * Return: Pointer to the first occurence of the character or NULL if not found
  */
