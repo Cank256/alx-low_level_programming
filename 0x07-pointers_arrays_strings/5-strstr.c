@@ -15,7 +15,7 @@ int i, j, k;
 
 if (*needle == '\0')
 {
-return haystack;
+return (haystack);
 }
 
 for (i = 0; haystack[i] != '\0'; i++)

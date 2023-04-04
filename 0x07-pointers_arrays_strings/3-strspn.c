@@ -22,7 +22,8 @@ if (s[i] == accept[j])
 break;
 }
 }
-if (accept[j] == '\0') {
+if (accept[j] == '\0')
+{
 return (i);
 }
 }
