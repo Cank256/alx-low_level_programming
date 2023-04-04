@@ -7,7 +7,7 @@
  * @a: The square matrix of integers.
  * @size: The size of the square matrix.
  *
- * Return: None.
+ * Return: void
  */
 void print_diagsums(int *a, int size)
 {
@@ -24,4 +24,6 @@ sum2 += a[i];
 }
 
 printf("%d, %d\n", sum1, sum2);
+
+return (0);
 }
