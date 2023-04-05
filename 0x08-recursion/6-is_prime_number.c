@@ -1,6 +1,5 @@
 #include "main.h"
 #include <stdio.h>
-#include <math.h>
 
 /**
  * is_prime_number - Function that returns 1 if the
@@ -13,20 +12,16 @@
 int is_prime_number(int n)
 {
 
-int i;
-
-if (n == 0 || n == 1)
+if (n == 1)
 {
-return (0);
-}
-
-for (i = 2; i <= sqrt(n); i++)
-{
-if (n % i == 0)
-{
-return (0);
-}
-}
-
 return (1);
+}
+else if (n % 2 == 0)
+{
+return (1);
+}
+else
+{
+return (0);
+}
 }
