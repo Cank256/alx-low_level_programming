@@ -2,7 +2,7 @@
 #include <stdio.h>
 
 /**
- * _pow_recursion - Function that returns the value of 
+ * _pow_recursion - Function that returns the value of
  *                  x raised to the power of y
  * @x: The value to be raise
  * @y: The power
@@ -19,7 +19,7 @@ else if (y == 0)
 {
 return (1);
 }
-else if ( y > 0)
+else if (y > 0)
 {
 return (x * _pow_recursion(x, y - 1));
 }
