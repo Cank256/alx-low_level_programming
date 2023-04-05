@@ -21,6 +21,15 @@ return (_sqrt_helper(n, 0, n));
 }
 }
 
+/**
+ * _sqrt_helper - Function that helps return the
+ *                   natural square root of a number
+ * @n: Number to get square root
+ * @max: Maximum
+ * @min: Minimum
+ *
+ * Return: Natural square root of a number
+ */
 int _sqrt_helper(int n, int min, int max)
 {
 int guess;
