@@ -25,23 +25,25 @@ return (_sqrt_helper(n, 0, n));
 
 int _sqrt_helper(int n, int min, int max)
 {
+int guess;
+
 if (max < min)
 {
-return -1;
+return (-1);
 }
 
-int guess = (min + max) / 2;
+guess = (min + max) / 2;
 
 if (guess * guess == n)
 {
-return guess;
+return (guess);
 }
 else if (guess * guess < n)
 {
-return _sqrt_helper(n, guess + 1, max);
+return (_sqrt_helper(n, guess + 1, max));
 }
 else
 {
-return _sqrt_helper(n, min, guess - 1);
+return (_sqrt_helper(n, min, guess - 1));
 }
 }
