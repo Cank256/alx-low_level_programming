@@ -22,7 +22,7 @@ return (1);
 }
 else if (n % 2 != 0)
 {
-return (0);
+return (1);
 }
 else
 {
