@@ -20,7 +20,7 @@ return (n);
 }
 else
 {
-return (_sqrt_helper(n, n/2));
+return (_sqrt_helper(n, n / 2));
 }
 }
 
@@ -34,8 +34,8 @@ return (_sqrt_helper(n, n/2));
  */
 int _sqrt_helper(int n, int guess)
 {
-int new_guess = (guess + n/guess) / 2;
-    
+int new_guess = (guess + (n / guess)) / 2;
+
 if (new_guess == guess)
 {
 return (guess);
