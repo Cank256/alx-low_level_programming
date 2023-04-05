@@ -41,11 +41,11 @@ return (-1);
 
 guess = (min + max) / 2;
 
-if ((guess * guess) == n)
+if ((guess *guess) == n)
 {
 return (guess);
 }
-else if ((guess * guess) < n)
+else if ((guess *guess) < n)
 {
 return (_sqrt_helper(n, guess + 1, max));
 }
