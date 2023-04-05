@@ -12,15 +12,15 @@ int _sqrt_recursion(int n)
 {
 if (n < 0)
 {
-return -1;
+return (-1);
 }
 else if (n == 0 || n == 1)
 {
-return n;
+return (n);
 }
 else
 {
-return _sqrt_helper(n, n/2);
+return (_sqrt_helper(n, n/2));
 }
 }
 
@@ -38,10 +38,10 @@ int new_guess = (guess + n/guess) / 2;
     
 if (new_guess == guess)
 {
-return guess;
+return (guess);
 }
 else
 {
-return _sqrt_helper(n, new_guess);
+return (_sqrt_helper(n, new_guess));
 }
 }
