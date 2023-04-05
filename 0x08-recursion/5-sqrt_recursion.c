@@ -1,8 +1,6 @@
 #include "main.h"
 #include <stdio.h>
 
-int _sqrt_helper(int n, int min, int max);
-
 /**
  * _sqrt_recursion - Function that returns the
  *                   natural square root of a number
@@ -34,11 +32,11 @@ return (-1);
 
 guess = (min + max) / 2;
 
-if (guess * guess == n)
+if ((guess * guess) == n)
 {
 return (guess);
 }
-else if (guess * guess < n)
+else if ((guess * guess) < n)
 {
 return (_sqrt_helper(n, guess + 1, max));
 }
