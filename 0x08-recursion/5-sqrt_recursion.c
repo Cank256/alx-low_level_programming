@@ -10,14 +10,17 @@
  */
 int _sqrt_recursion(int n)
 {
-
 if (n < 0)
 {
-return (-1);
+return -1;
+}
+else if (n == 0 || n == 1)
+{
+return n;
 }
 else
 {
-return (_sqrt_helper(n, 0, n));
+return _sqrt_helper(n, n/2);
 }
 }
 
@@ -25,32 +28,20 @@ return (_sqrt_helper(n, 0, n));
  * _sqrt_helper - Function that helps return the
  *                   natural square root of a number
  * @n: Number to get square root
- * @max: Maximum
- * @min: Minimum
+ * @guess: Guess value
  *
  * Return: Natural square root of a number
  */
-int _sqrt_helper(int n, int min, int max)
+int _sqrt_helper(int n, int guess)
 {
-int guess;
-
-if (max < min)
+int new_guess = (guess + n/guess) / 2;
+    
+if (new_guess == guess)
 {
-return (-1);
-}
-
-guess = (min + max) / 2;
-
-if ((guess *guess) == n)
-{
-return (guess);
-}
-else if ((guess *guess) < n)
-{
-return (_sqrt_helper(n, guess + 1, max));
+return guess;
 }
 else
 {
-return (_sqrt_helper(n, min, guess - 1));
+return _sqrt_helper(n, new_guess);
 }
 }
