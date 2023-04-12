@@ -23,6 +23,9 @@ if (duplicate == NULL)
 return (NULL);
 }
 
-strcpy(duplicate, str);
+for (size_t i = 0; i <= len; i++)
+{
+duplicate[i] = str[i];
+}
 return (duplicate);
 }
