@@ -10,6 +10,7 @@
  */
 char *_strdup(char *str)
 {
+size_t i;
 size_t len = strlen(str);
 char *duplicate = (char *)malloc(len + 1);
 
@@ -23,7 +24,7 @@ if (duplicate == NULL)
 return (NULL);
 }
 
-for (size_t i = 0; i <= len; i++)
+for (i = 0; i <= len; i++)
 {
 duplicate[i] = str[i];
 }
