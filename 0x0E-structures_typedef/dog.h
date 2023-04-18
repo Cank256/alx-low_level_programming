@@ -1,9 +1,14 @@
 /**
- * Dog - Structure of Dog
+ * struct dog - Represents a dog with its name, age, and owner.
+ *
+ * @name: Pointer to a character array that stores the name of the dog.
+ * @age: Floating-point number that represents the age of the dog.
+ * @owner: Pointer to a character array that stores the owner of the dog.
  */
-struct Dog
+struct dog
 {
 char *name;
 float age;
 char *owner;
 };
+
