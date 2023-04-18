@@ -12,7 +12,25 @@ if (d == NULL)
 return;
 }
 
-printf("Name: %s\n", (d->name != NULL ? d->name : "(nil)"));
+printf("Name: ");
+if (d->name != NULL)
+{
+printf("%s\n", d->name);
+}
+else
+{
+printf("(nil)\n");
+}
+
 printf("Age: %.1f\n", d->age);
-printf("Owner: %s\n", (d->owner != NULL ? d->owner : "(nil)"));
+
+printf("Owner: ");
+if (d->owner != NULL)
+{
+printf("%s\n", d->owner);
+}
+else
+{
+printf("(nil)\n");
+}
 }
