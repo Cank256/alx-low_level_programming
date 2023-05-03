@@ -21,7 +21,7 @@ return (NULL);
 
 if (idx == 0)
 {
-return (add_nodeint(head, n));
+return (add_nodeint_end(head, n));
 }
 
 for (i = 0; i < idx - 1 && current != NULL; i++)
