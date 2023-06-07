@@ -1,6 +1,6 @@
 #include "main.h"
 #include <stdio.h>
-#include <stddef.h>
+#include <string.h>
 
 /**
  * is_palindrome - checks if a string is a palindrome
@@ -10,14 +10,8 @@
  */
 int is_palindrome(char *s)
 {
-int len = 0, i = 0;
-
-while (s[len])
-{
-len++;
-}
-
-return (check_palindrome(s, i, len - 1));
+int len = strlen(s);
+return (check_palindrome(s, 0, len - 1));
 }
 
 /**
