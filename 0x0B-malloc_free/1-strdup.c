@@ -1,6 +1,8 @@
-#include <stdlib.h> // for malloc, free
+#include <main.h>
+#include <stdlib.h>
 
-char *_strdup(char *str) {
+char *_strdup(char *str)
+{
 
 int length = 0;
 int i;
