@@ -24,19 +24,18 @@ if (s2 == NULL)
 s2 = "";
 }
 
+len1 = strlen(s1);
+len2 = strlen(s2);
 if (n >= len2)
 {
 n = len2;
 }
 
+result = malloc(len1 + n + 1);
 if (result == NULL)
 {
 return (NULL);
 }
-
-len1 = strlen(s1);
-len2 = strlen(s2)
-result = malloc(len1 + n + 1);
 
 strcpy(result, s1);
 strncat(result, s2, n);
