@@ -22,7 +22,7 @@ if (ptr == NULL)
 return (NULL);
 }
 
-ptr = calloc(nmemb, size);
+memset(ptr, 0, nmemb * size);
 
 return (ptr);
 }
