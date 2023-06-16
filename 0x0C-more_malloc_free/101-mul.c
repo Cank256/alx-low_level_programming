@@ -29,8 +29,8 @@ return (1);
  */
 void multiply(const char *num1, const char *num2)
 {
-int len1 = 0, len2 = 0, i = 0, j;
-int *result;
+int len1 = 0, len2 = 0, i, j, k;
+int result[200];
 
 while (num1[len1] != '\0')
 {
@@ -42,8 +42,6 @@ while (num2[len2] != '\0')
 len2++;
 }
 
-result = malloc(sizeof(int) * (len1 + len2));
-
 for (i = 0; i < len1 + len2; i++)
 {
 result[i] = 0;
@@ -51,14 +49,17 @@ result[i] = 0;
 
 for (i = len1 - 1; i >= 0; i--)
 {
-for (j = len2 - 1; j >= 0; j--)
+int carry = 0;
+for (j = len2 - 1, k = i + len2; j >= 0; j--, k--)
 {
-int product = (num1[i] - '0') * (num2[j] - '0');
-int sum = result[i + j + 1] + product;
-result[i + j] += sum / 10;
-result[i + j + 1] = sum % 10;
+int product = (num1[i] - '0') * (num2[j] - '0') + result[k] + carry;
+result[k] = product % 10;
+carry = product / 10;
 }
+result[k] = carry;
 }
+
+i = 0;
 while (result[i] == 0 && i < len1 + len2 - 1)
 {
 i++;
@@ -68,7 +69,6 @@ for (; i < len1 + len2; i++)
 printf("%d", result[i]);
 }
 printf("\n");
-free(result);
 }
 
 /**
