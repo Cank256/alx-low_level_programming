@@ -5,7 +5,7 @@
  *
  * Return: A string containing the random password.
  */
-char *generate_random_password()
+char *generate_random_password(void)
 {
 static const char charset[] =
 "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
@@ -30,4 +30,15 @@ password[i] = charset[index];
 password[PASSWORD_LENGTH] = '\0';
 
 return (password);
+}
+
+int main(void)
+{
+char *password = generate_random_password();
+
+printf("Generated password: %s\n", password);
+
+free(password);
+
+return (0);
 }
