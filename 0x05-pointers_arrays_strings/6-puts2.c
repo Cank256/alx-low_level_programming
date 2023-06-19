@@ -13,7 +13,13 @@ int i = 0;
 while (str[i] != '\0')
 {
 printf("%c", str[i]);
-i += 2;
+i++;
+
+if (str[i] == '\0')
+{
+break;
+}
+i++;
 }
 
 printf("\n");
