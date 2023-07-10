@@ -10,12 +10,14 @@
  */
 int create_file(const char *filename, char *text_content)
 {
+int fileDescriptor = open(filename, O_WRONLY | O_CREAT | O_TRUNC, 0600);
+int textLength = 0;
+ssize_t bytesWritten = write(fileDescriptor, text_content, textLength);
 if (filename == NULL)
 {
 return (-1);
 }
 
-int fileDescriptor = open(filename, O_WRONLY | O_CREAT | O_TRUNC, 0600);
 if (fileDescriptor == -1)
 {
 return (-1);
@@ -23,13 +25,11 @@ return (-1);
 
 if (text_content != NULL)
 {
-int textLength = 0;
 while (text_content[textLength] != '\0')
 {
 textLength++;
 }
 
-ssize_t bytesWritten = write(fileDescriptor, text_content, textLength);
 if (bytesWritten == -1)
 {
 close(fileDescriptor);
