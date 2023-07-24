@@ -1,7 +1,2 @@
 #!/bin/bash
-
-# get the base name without the .c extension
-base_name=$(basename "$CFILE" .c)
-
-# compile the C file to assembly
-gcc -S -masm=intel "$CFILE" -o "${base_name}.s"
+gcc -S -masm=intel $CFILE
