@@ -1,2 +1,2 @@
 #!/bin/bash
-gcc -S -masm=intel $CFILE
+base_name=$(basename "$CFILE" .c); gcc -S -masm=intel "$CFILE" -o "${base_name}.s"
