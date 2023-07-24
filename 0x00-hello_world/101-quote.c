@@ -6,9 +6,9 @@
 int main(void)
 {
 char *message;
-message = "and that piece of art is useful\" - Dora Korpar, 2015-10-19\n";
 int length = 59;
 int i;
+message = "and that piece of art is useful\" - Dora Korpar, 2015-10-19\n";
 for (i = 0; i < length; i++)
 {
 write(2, &message[i], 1);
