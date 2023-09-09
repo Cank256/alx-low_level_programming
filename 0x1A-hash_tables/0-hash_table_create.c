@@ -15,12 +15,14 @@
  */
 HashTable *hash_table_create(unsigned long int size)
 {
+unsigned long int i;
+HashTable *new_table = (HashTable *)malloc(sizeof(HashTable));
+
 if (size <= 0)
 {
 return (NULL);
 }
 
-HashTable *new_table = (HashTable *)malloc(sizeof(HashTable));
 if (new_table == NULL)
 {
 return (NULL);
@@ -28,13 +30,14 @@ return (NULL);
 
 new_table->size = size;
 new_table->array = (HashNode **)malloc(sizeof(HashNode *) * size);
+
 if (new_table->array == NULL)
 {
 free(new_table);
 return (NULL);
 }
 
-for (unsigned long int i = 0; i < size; i++)
+for (i = 0; i < size; i++)
 {
 new_table->array[i] = NULL;
 }
