@@ -21,12 +21,12 @@ typedef struct HashNode {
  * @size: The size of the hash table (number of buckets)
  * @array: An array of pointers to HashNode structures (buckets)
  */
-typedef struct HashTable {
+typedef struct hash_table_t {
     unsigned long int size;
     HashNode **array;
-} HashTable;
+} hash_table_t;
 
 /* Function prototypes */
-HashTable *hash_table_create(unsigned long int size);
+hash_table_t *hash_table_create(unsigned long int size);
 
 #endif /* HASH_TABLES_H */

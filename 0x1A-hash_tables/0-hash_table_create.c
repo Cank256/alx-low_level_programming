@@ -13,10 +13,10 @@
  * If any memory allocation fails or if the size is less than or equal to 0,
  * it returns NULL.
  */
-HashTable *hash_table_create(unsigned long int size)
+hash_table_t *hash_table_create(unsigned long int size)
 {
 unsigned long int i;
-HashTable *new_table = (HashTable *)malloc(sizeof(HashTable));
+hash_table_t *new_table = (hash_table_t *)malloc(sizeof(hash_table_t));
 
 if (size <= 0)
 {
