@@ -47,10 +47,7 @@ return (ht);
 int shash_table_set(shash_table_t *ht, const char *key, const char *value)
 {
 shash_node_t *new_node = NULL, *current = NULL;
-if (!ht || !key || strlen(key) == 0)
-{
-return (0);
-}
+if (!ht || !key || strlen(key) == 0)return (0);
 current = ht->shead;
 while (current)
 {
