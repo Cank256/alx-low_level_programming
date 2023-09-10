@@ -46,8 +46,11 @@ return (ht);
  */
 int shash_table_set(shash_table_t *ht, const char *key, const char *value)
 {
-shash_node_t *new_node = NULL, *current = NULL;
-if (!ht || !key || strlen(key) == 0)return (0);
+shash_node_t *new_node, *current;
+if (!ht || !key || strlen(key) == 0)
+{
+return (0);
+}
 current = ht->shead;
 while (current)
 {
@@ -55,11 +58,7 @@ if (strcmp(current->key, key) == 0)
 {
 free(current->value);
 current->value = strdup(value);
-if (!current->value)
-{
-return (0);
-}
-return (1);
+return (current->value ? 1 : 0);
 }
 current = current->snext;
 }
