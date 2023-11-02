@@ -1,20 +1,15 @@
-# Variables
 CC = gcc
-SRC = main.c another_file.c
+SRC = main.c school.c
 OBJ = $(SRC:.c=.o)
-NAME = school
+NAME = school main
 
-# Executable and its dependencies
 $(NAME): $(OBJ)
 	$(CC) -o $@ $^
 
-# Compile each .c file into a .o file
 %.o: %.c
 	$(CC) -c $< -o $@
 
-# The 'all' rule builds the executable
 all: $(NAME)
 
-# Clean rule to remove the executable and object files
 clean:
 	rm -f $(NAME) $(OBJ)
