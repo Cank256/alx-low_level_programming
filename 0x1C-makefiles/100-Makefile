@@ -18,19 +18,19 @@ all: $(NAME)
 
 # Build the executable
 $(NAME): $(OBJ)
-	$(CC) $(CFLAGS) -o $@ $(OBJ)
+	$(CC) -Wall -Werror -Wextra -pedantic -o $@ $(OBJ)
 
 # Cleaning rules
 .PHONY: clean oclean fclean re
 
 clean:
-	-@$(RM) *~ $(NAME) # Clean Emacs and Vim temporary files
+	$(RM) *~ $(NAME) # Clean Emacs and Vim temporary files
 
 oclean: clean
-	-@$(RM) $(OBJ) # Clean object files
+	$(RM) $(OBJ) # Clean object files
 
 fclean: oclean
-	-@rm -f $(NAME) # Remove the executable
+	rm -f $(NAME) # Remove the executable
 
 re: fclean all
 
