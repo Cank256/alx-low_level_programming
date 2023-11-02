@@ -13,24 +13,26 @@ OBJ = $(SRC:.c=.o)
 # Executable name
 NAME = school
 
-# Command to remove files
-RM = /bin/rm -f
-
 # Main target
 all: $(NAME)
 
 # Build the executable
 $(NAME): $(OBJ)
-	$(CC) $(OBJ) -o $(NAME)
+	$(CC) $(CFLAGS) -o $@ $(OBJ)
 
 # Cleaning rules
+.PHONY: clean oclean fclean re
+
 clean:
-	$(RM) $(OBJ) *~
+	-@rm -f *~ $(NAME) # Clean Emacs and Vim temporary files
+
 oclean: clean
-	$(RM) $(NAME)
+	-@rm -f $(OBJ) # Clean object files
+
 fclean: oclean
+	-@rm -f $(NAME) # Remove the executable
 
 re: fclean all
 
-# Ensure that m.h header file exists
-$(OBJ): m.h
+# Ensure that m.h header file exists for each source file
+$(SRC:.c=.o): m.h
