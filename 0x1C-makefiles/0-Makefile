@@ -1,7 +1,14 @@
-school: school.c
-    gcc -o school
+CXX = gcc
+CXXFLAGS = -Wall -Wextra -Werror -pedantic
 
-all: school
+SRC = 
+OBJ = $(SRC:.cc=.o)
+EXEC = school
+
+all: $(EXEC)
+
+$(EXEC): $(OBJ)
+	$(CXX) $(CXXFLAGS) -o $(EXEC) main.c school.c
 
 clean:
-    rm -f school
+	rm -rf $(OBJ) $(EXEC)
