@@ -24,13 +24,13 @@ $(NAME): $(OBJ)
 .PHONY: clean oclean fclean re
 
 clean:
-	$(RM) *~ $(NAME)
+	-@$(RM) *~ $(NAME)
 
 oclean: clean
-	$(RM) $(OBJ)
+	-@$(RM) $(OBJ)
 
 fclean: oclean
-	rm -f $(NAME)
+	-@rm -f $(NAME)
 
 re: fclean all
 
