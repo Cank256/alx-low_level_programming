@@ -13,8 +13,6 @@ OBJ = $(SRC:.c=.o)
 # Executable name
 NAME = school
 
-RM = rm -f
-
 # Main target
 all: $(NAME)
 
@@ -26,13 +24,13 @@ $(NAME): $(OBJ)
 .PHONY: clean oclean fclean re
 
 clean:
-	$(RM) *~ $(NAME) # Clean Emacs and Vim temporary files
+	$(RM) *~ $(NAME)
 
 oclean: clean
-	$(RM) $(OBJ) # Clean object files
+	$(RM) $(OBJ)
 
 fclean: oclean
-	rm -f $(NAME) # Remove the executable
+	rm -f $(NAME)
 
 re: fclean all
 
