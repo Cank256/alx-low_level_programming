@@ -24,13 +24,13 @@ $(NAME): $(OBJ)
 .PHONY: clean oclean fclean re
 
 clean:
-	-@rm -f *~ $(NAME) # Clean Emacs and Vim temporary files
+	-@$(RM) *~ $(NAME) # Clean Emacs and Vim temporary files
 
 oclean: clean
-	-@rm -f $(OBJ) # Clean object files
+	-@$(RM) $(OBJ) # Clean object files
 
 fclean: oclean
-	-@rm -f $(NAME) # Remove the executable
+	-@$(RM) $(NAME) # Remove the executable
 
 re: fclean all
 
