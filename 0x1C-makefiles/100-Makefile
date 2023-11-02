@@ -30,7 +30,7 @@ oclean: clean
 	-@$(RM) $(OBJ) # Clean object files
 
 fclean: oclean
-	-@$(RM) $(NAME) # Remove the executable
+	-@rm -f $(NAME) # Remove the executable
 
 re: fclean all
 
