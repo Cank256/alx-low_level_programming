@@ -9,7 +9,7 @@
  *
  * Return: Node containing the value if found, otherwise NULL.
  */
-listint_t *jump_list(listint_t *list, size_t size, int value)
+skiplist_t *jump_list(skiplist_t *list, size_t size, int value)
 {
 size_t jump, prev;
 listint_t *current;
