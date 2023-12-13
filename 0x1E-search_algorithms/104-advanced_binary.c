@@ -58,3 +58,25 @@ else
 return (advanced_binary_recursive(array, start, mid - 1, value));
 }
 }
+
+/**
+ * print_array - Print elements of an array between start and end indices.
+ * @array: Pointer to the first element of the array.
+ * @start: Index to start printing from.
+ * @end: Index to stop printing at.
+ */
+void print_array(int *array, size_t start, size_t end)
+{
+size_t i;
+
+printf("Searching in array: ");
+for (i = start; i <= end; ++i)
+{
+printf("%d", array[i]);
+if (i < end)
+{
+printf(", ");
+}
+}
+printf("\n");
+}

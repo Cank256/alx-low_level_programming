@@ -6,6 +6,7 @@
 #include <stdlib.h>
 #include <string.h>
 #include <time.h>
+#include <math.h>
 
 
 /**
@@ -36,5 +37,6 @@ int advanced_binary_recursive(int *array, size_t start, size_t end, int value);
 skiplist_t *jump_list(skiplist_t *list, size_t size, int value);
 skiplist_t *linear_skip(skiplist_t *list, int value);
 void print_array(int *array, size_t start, size_t end);
+size_t min(size_t a, size_t b);
 
 #endif /* SEARCH_ALGOS_H */

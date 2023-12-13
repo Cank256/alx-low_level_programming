@@ -20,7 +20,7 @@ return (-1);
 jump = sqrt(size);
 prev = 0;
 
-while (array[min(jump, size) - 1] < value)
+while (array[(size_t)min(jump, size) - 1] < value)
 {
 printf("Value checked array[%lu] = [%d]\n", prev, array[prev]);
 prev = jump;
@@ -31,7 +31,7 @@ return (-1);
 }
 }
 
-for (; prev < min(jump, size); prev++)
+for (; prev < (size_t)min(jump, size); prev++)
 {
 printf("Value checked array[%lu] = [%d]\n", prev, array[prev]);
 if (array[prev] == value)
@@ -41,4 +41,15 @@ return (prev);
 }
 
 return (-1);
+}
+
+/**
+ * min - Returns the minimum of two values.
+ * @a: First value.
+ * @b: Second value.
+ *
+ * Return: The smaller of the two values.
+ */
+size_t min(size_t a, size_t b) {
+    return (a < b) ? a : b;
 }
