@@ -1,38 +1,34 @@
+#include <stdio.h>
+#include <stdlib.h>
 #include "search_algos.h"
 
+listint_t *create_list(int *array, size_t size);
+void print_list(const listint_t *list);
+void free_list(listint_t *list);
+
 /**
- * main - Entry point for testing search algorithms.
+ * main - Entry point
  *
- * Return: Always 0 (Success).
+ * Return: Always EXIT_SUCCESS
  */
 int main(void)
 {
-int array[] = {0, 1, 2, 3, 4, 5, 6, 7, 8, 9};
-size_t size = sizeof(array) / sizeof(array[0]);
-int value = 6;
-int result;
+    listint_t *list, *res;
+    int array[] = {
+        0, 1, 2, 3, 4, 7, 12, 15, 18, 19, 23, 53, 61, 62, 76, 99
+    };
+    size_t size = sizeof(array) / sizeof(array[0]);
 
-printf("Searching for %d in the array...\n", value);
+    list = create_list(array, size);
+    print_list(list);
 
-result = linear_search(array, size, value);
-if (result != -1)
-{
-printf("Found %d at index %d using linear search.\n", value, result);
-}
-else
-{
-printf("%d not found in the array using linear search.\n", value);
-}
+    res =  jump_list(list, size, 53);
+    printf("Found %d at index: %lu\n\n", 53, res->index);
+    res =  jump_list(list, size, 2);
+    printf("Found %d at index: %lu\n\n", 2, res->index);
+    res =  jump_list(list, size, 999);
+    printf("Found %d at index: %p\n", 999, (void *) res);
 
-result = binary_search(array, size, value);
-if (result != -1)
-{
-printf("Found %d at index %d using binary search.\n", value, result);
-}
-else
-{
-printf("%d not found in the array using binary search.\n", value);
-}
-
-return (0);
+    free_list(list);
+    return (EXIT_SUCCESS);
 }
